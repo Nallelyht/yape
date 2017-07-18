@@ -9,5 +9,7 @@ var validarNumero = function() {
 	var $terminos = $('#terminos');
 	var $registroTelefono = $('#numero-registro');
 	
+
+	
 };
 $(document).ready(cargarPagina);

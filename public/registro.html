@@ -23,16 +23,17 @@
 			</div>
 			<form class="row">
 				<div class="input-field col s12">
-					<input id="numero-registro" type="text">
+					<input id="numero-registro" type="tel" name="numero-registro" pattern="[0-9]{10}" required>
 					<label for="numero-registro"><img src="img/icons/phoneandnumber.png" alt="number" class="responsive-img"></label>
 					<p>
 						<input type="checkbox" class="filled-in" id="terminos"/>
 						<label for="terminos">Acepto los <a href="#">Términos y condiciones</a></label>
 					</p>
 					<div class="center">
-						<a class="btn waves-effect white-text" id="btn-continuar" href="registro.html" disabled>
-							CONTINUAR
-						</a>
+						<button
+										class="btn waves-effect white-text" id="btn-continuar" href="registro.html"  >
+							<a>CONTINUAR
+							</a> </button>
 					</div>
 				</div>
 			</form>
