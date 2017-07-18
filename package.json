@@ -26,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/Nallelyht/yape/issues"
   },
-  "homepage": "https://github.com/Nallelyht/yape#readme"
+  "homepage": "https://github.com/Nallelyht/yape#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
 }

@@ -1,3 +1,6 @@
+.container{
+	height: 100vh;
+}
 .carousel-fixed-item .btn{
 	background-color: #fbd43b;
 }
@@ -9,4 +12,16 @@
 }
 .input-field .responsive-img{
 	width: 4rem;
+}
+.aligner {
+	display: flex;
+	align-items: center;
+	justify-content:center;
+	flex-direction: column;
+}
+.bold{
+	font-weight: bold;
+}
+.center .btn {
+	margin-top: 2rem;
 }

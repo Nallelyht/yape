@@ -9,24 +9,28 @@
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
-		<section class="container">
+		<section class="container aligner">
 			<div class="row">
 				<div>
 					<img src="img/icons/phone.png" alt="phone" class="responsive-img">
 				</div>
-				<p class="center-align">Para comenzar validaremos tu número</p>
-				<p class="center-align">Recibiras un SMS con un código de validación</p>
+			</div>
+			<div class="row">
+				<div class="col s12">
+					<h5 class="center-align bold">Para comenzar validaremos tu número</h5>
+					<p class="center-align">Recibiras un SMS con un código de validación</p>
+				</div>
 			</div>
 			<form class="row">
 				<div class="input-field col s12">
-					<input id="numero" type="text">
-					<label for="numero"><img src="img/icons/phoneandnumber.png" alt="number" class="responsive-img"></label>
+					<input id="numero-registro" type="text">
+					<label for="numero-registro"><img src="img/icons/phoneandnumber.png" alt="number" class="responsive-img"></label>
 					<p>
-						<input type="checkbox" class="filled-in" id="filled-in-box"/>
-						<label for="filled-in-box">Acepto los <a href="#">Términos y condiciones</a></label>
+						<input type="checkbox" class="filled-in" id="terminos"/>
+						<label for="terminos">Acepto los <a href="#">Términos y condiciones</a></label>
 					</p>
 					<div class="center">
-						<a class="btn waves-effect white-text" href="registro.html">
+						<a class="btn waves-effect white-text" id="btn-continuar" href="registro.html" disabled>
 							CONTINUAR
 						</a>
 					</div>
