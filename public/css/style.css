@@ -1,0 +1,9 @@
+.carousel-fixed-item .btn{
+	background-color: #fbd43b;
+}
+.carousel-slider .indicators .indicator-item.active {
+	background-color: #f64451;
+}
+.carousel-slider .indicators .indicator-item{
+	background-color: rgba(246,68,81,0.29);
+}

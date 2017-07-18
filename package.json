@@ -1,10 +1,11 @@
 {
   "name": "yape-solution",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Solución del Proyeto final del Sprint 5 - Yape!",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "dependencies": {
     "body-parser": "^1.17.2",
@@ -15,5 +16,15 @@
     "morgan": "^1.8.2",
     "morgan-json": "^1.1.0",
     "random-number": "0.0.7"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nallelyht/yape.git"
+  },
+  "author": "Nallely House",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nallelyht/yape/issues"
+  },
+  "homepage": "https://github.com/Nallelyht/yape#readme"
 }
