@@ -7,3 +7,6 @@
 .carousel-slider .indicators .indicator-item{
 	background-color: rgba(246,68,81,0.29);
 }
+.input-field .responsive-img{
+	width: 4rem;
+}

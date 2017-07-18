@@ -10,11 +10,28 @@
 	</head>
 	<body>
 		<section class="container">
-		<div>
-			<img src="img/icons/phone.png" alt="phone" class="responsive-img">
-		</div>
-		<h2>Para comenzar validaremos tu número</h2>
-		<p>Recibiras un SMS con un código de validación</p>
+			<div class="row">
+				<div>
+					<img src="img/icons/phone.png" alt="phone" class="responsive-img">
+				</div>
+				<p class="center-align">Para comenzar validaremos tu número</p>
+				<p class="center-align">Recibiras un SMS con un código de validación</p>
+			</div>
+			<form class="row">
+				<div class="input-field col s12">
+					<input id="numero" type="text">
+					<label for="numero"><img src="img/icons/phoneandnumber.png" alt="number" class="responsive-img"></label>
+					<p>
+						<input type="checkbox" class="filled-in" id="filled-in-box"/>
+						<label for="filled-in-box">Acepto los <a href="#">Términos y condiciones</a></label>
+					</p>
+					<div class="center">
+						<a class="btn waves-effect white-text" href="registro.html">
+							CONTINUAR
+						</a>
+					</div>
+				</div>
+			</form>
 		</section>
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
