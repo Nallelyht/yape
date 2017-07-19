@@ -1,0 +1,17 @@
+.carousel.carousel-slider{height:90vh !important}
+.carousel-fixed-item .btn{background-color:#fbd43b}
+.carousel-slider .indicators .indicator-item.active{background-color:#f64451}
+.carousel-slider .indicators .indicator-item{background-color:rgba(246,68,81,0.29)}
+.input-field .responsive-img{width:4rem}
+.input-field .lock{width:1.2rem}
+.carousel .carousel-item>img{width:80%;margin-top:4rem}
+.aligner{display:flex;align-items:center;justify-content:center;flex-direction:column;height:100vh}
+.bold{font-weight:bold}
+.center .btn{margin-top:2rem}
+#btn-continuar a{color:#fff}
+.codigo input{
+	width: 90vw !important;
+}
+.usuario-exitoso{
+	background-color: #fbd43b;
+}
