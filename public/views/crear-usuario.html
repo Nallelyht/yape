@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+		<link rel="stylesheet" href="../assets/css/style.css">
+	</head>
+	<body>
+		<section class="container aligner">
+			<div class="row">
+				<div class="col s6 offset-s3">
+					<img src="../assets/img/icons/lockone.png" alt="phone" class="responsive-img">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s12">
+					<h5 class="center-align bold">Crea tu usuario Yape</h5>
+					<p class="center-align">Ingresa un nombre, email y clave de usuario.</p>
+				</div>
+			</div>
+			<form class="row center">
+				<div class="input-field col s12">
+					<input id="nombre-usuario" type="text" name="nombre-usuario" required>
+					<label for="nombre-usuario"><img src="../assets/img/icons/user.png" alt="user" class="responsive-img"></label>
+				</div>
+				<div class="input-field col s12">
+					<input id="correo-usuario" type="email" name="correo-usuario" required>
+					<label for="correo-usuario"><img src="../assets/img/icons/message-gray.png" alt="correo" class="responsive-img"></label>
+				</div>
+				<div class="input-field col s12">
+					<input id="contraseña-usuario" type="email" name="contraseña-usuario" required>
+					<label for="contraseña-usuario"><img src="../assets/img/icons/lock.png" alt="contraseña" class="responsive-img"></label>
+				</div> 
+				<div class="input-field col s12">
+					<p class="center-align">Cuida esta clave como oro, es tu acceso a Yape</p>
+				</div>
+				<div class="center">
+					<button class="btn waves-effect white-text" id="btn-continuar">
+						<a href="usuario-exitoso.html">
+							CREAR CUENTA
+						</a> 
+					</button>
+				</div>
+			</form>
+		</section>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+		<script src="../assets/js/app.js"></script>
+	</body>
+</html>
