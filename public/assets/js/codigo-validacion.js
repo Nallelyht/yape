@@ -9,13 +9,9 @@ function cuentaAtras(){
 			ceroseg=0;
 		}
 		if(segundos == 0){
-		deterContero(conteo);
 		location.href = "crear-usuario.html"
 	}
 	conteo = setTimeout(cuentaAtras,1000);
 }
 
-function deterContero(conteo){
-	clearTimeout(conteo)
-}
 $(document).ready(cuentaAtras);

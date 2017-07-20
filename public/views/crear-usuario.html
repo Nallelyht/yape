@@ -6,6 +6,7 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<title>Document</title>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+		<link rel="stylesheet" href="">
 		<link rel="stylesheet" href="../assets/css/style.css">
 	</head>
 	<body>
@@ -21,24 +22,26 @@
 					<p class="center-align">Ingresa un nombre, email y clave de usuario.</p>
 				</div>
 			</div>
-			<form class="row center">
+			<form class="row center" id="crear-usuario">
 				<div class="input-field col s12">
-					<input id="nombre-usuario" type="text" name="nombre-usuario" required>
-					<label for="nombre-usuario"><img src="../assets/img/icons/user.png" alt="user" class="responsive-img"></label>
+					<img src="../assets/img/icons/user.png" alt="user" class="responsive-img input-registro prefix">
+					<input id="nombre-usuario" type="text" name="nombre-usuario" placeholder="Nombre" required>
 				</div>
 				<div class="input-field col s12">
-					<input id="correo-usuario" type="email" name="correo-usuario" required>
-					<label for="correo-usuario"><img src="../assets/img/icons/message-gray.png" alt="correo" class="responsive-img"></label>
+					<img src="../assets/img/icons/message-gray.png" alt="correo" class="responsive-img input-registro prefix validate">
+					<input id="correo-usuario" type="email" name="correo-usuario" placeholder="correo@ejemplo.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+
 				</div>
 				<div class="input-field col s12">
-					<input id="contraseña-usuario" type="email" name="contraseña-usuario" required>
-					<label for="contraseña-usuario"><img src="../assets/img/icons/lock.png" alt="contraseña" class="responsive-img"></label>
+					<img src="../assets/img/icons/lock.png" alt="contraseña" class="responsive-img input-registro prefix">
+					<input id="contraseña-usuario" type="password" name="contraseña-usuario" required  placeholder="Ingresa clave de 6 digitos" pattern="[0-9]{6}">
+
 				</div> 
 				<div class="input-field col s12">
 					<p class="center-align">Cuida esta clave como oro, es tu acceso a Yape</p>
 				</div>
 				<div class="center">
-					<button class="btn waves-effect white-text" id="btn-continuar">
+					<button class="btn waves-effect white-text" id="btn-crear-cuenta" disabled type="submit">
 						<a href="usuario-exitoso.html">
 							CREAR CUENTA
 						</a> 
