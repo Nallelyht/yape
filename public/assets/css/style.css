@@ -1,3 +1,6 @@
+body{
+	color: #8f8f8f;
+}
 .carousel.carousel-slider{height:90vh !important}
 .btn{background-color:#fbd43b}
 .carousel-slider .indicators .indicator-item.active{background-color:#f64451}
@@ -6,9 +9,13 @@
 .input-field .lock{width:1.2rem}
 .carousel .carousel-item>img{width:80%;margin-top:4rem}
 .aligner{display:flex;align-items:center;justify-content:center;flex-direction:column;height:100vh}
-.bold{font-weight:bold}
+.bold{font-weight:bold;
+color: black}
 .center .btn{margin-top:2rem}
 a{color:#fff}
+.registro-terminos a{
+	color: #00c3a3;
+}
 .codigo input{
 	width: 90vw !important;
 }

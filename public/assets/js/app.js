@@ -1,11 +1,13 @@
 var $botonContinuar = $('#btn-continuar');
-var $registroTelefono = $('#numero-registro');
+var $continuarCodigo = $("#continuar-codigo");
+var $registroTelefono = $('#registro-telefono');
 var $terminos = $('#terminos');
 var $crearUsuario = $("#crear-usuario");
 var $nombreUsuario = $("#nombre-usuario");
 var $correoUsuario = $("#correo-usuario");
 var $contraseñaUsuario = $("#contraseña-usuario");
 var $botonCrearCuenta = $("#btn-crear-cuenta");
+var $registroNumero = $("#form-registro-numero")
 
 
 
@@ -16,7 +18,6 @@ var cargarPagina = function () {
 	$registroTelefono.change(validarNumero);
 	$botonContinuar.click(enviarNumero);
 	$crearUsuario.change(crearUsuario);
-	$crearUsuario.submit(enviarUsuario);
 };
 
 var validarNumero = function() {
@@ -34,6 +35,7 @@ var removerAtributo = function (){
 };
 
 var enviarNumero = function (e){
+	e.preventDefault();
 	$.post("http://localhost:3000/api/registerNumber", {
 		"phone": $registroTelefono.val(),
 		"terms": true
@@ -51,18 +53,18 @@ var crearUsuario = function(e){
 	e.preventDefault();
 	if($nombreUsuario.val().length != 0 && $correoUsuario.val() != 0 && $contraseñaUsuario.val().length == 6){
 		$botonCrearCuenta.removeAttr("disabled");
-		
+
 	}else{
 		$botonCrearCuenta.attr('disabled',true);
 	};
 };
 var enviarUsuario = function (e){
-	e.preventDefault;
+	e.preventDefault();
 	$.post("http://localhost:3000/api/createUser", {
 		"phone" : $registroTelefono.val(),
-      "name" : $nombreUsuario.val(),
-      "email" : $correoUsuario.val(),
-      "password" : $contraseñaUsuario.val(),
+		"name" : $nombreUsuario.val(),
+		"email" : $correoUsuario.val(),
+		"password" : $contraseñaUsuario.val(),
 	}).then(function(respuesta){
 		location.href = "usuario-exitoso.html"
 		console.log(respuesta)

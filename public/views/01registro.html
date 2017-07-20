@@ -21,17 +21,17 @@
 					<p class="center-align">Recibiras un SMS con un código de validación</p>
 				</div>
 			</div>
-			<form class="row" id="registro-numero">
+			<form class="row" id="form-registro-numero">
 				<div class="input-field col s12">
-					<input id="numero-registro" type="tel" name="numero-registro" pattern="[0-9]{10}" required>
-					<label for="numero-registro"><img src="../assets/img/icons/phoneandnumber.png" alt="number" class="responsive-img"></label>
-					<p>
+					<input id="registro-telefono" type="tel" name="registro-telefono" pattern="[0-9]{10}" required>
+					<label for="registro-telefono" class=""><img src="../assets/img/icons/phoneandnumber.png" alt="number" class="responsive-img"></label>
+					<p class="registro-terminos">
 						<input type="checkbox" class="filled-in" id="terminos"/>
 						<label for="terminos">Acepto los <a href="#">Términos y condiciones</a></label>
 					</p>
 					<div class="center">
 						<button class="btn waves-effect white-text" id="btn-continuar" disabled>
-							<a href="codigo.html">CONTINUAR
+							<a id="continuar-codigo">CONTINUAR
 							</a> </button>
 					</div>
 				</div>
