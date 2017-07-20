@@ -21,3 +21,32 @@ a{color:#fff}
 input[placeholder]{
 	text-align: center;
 }
+.cara-feliz{
+	background-color: #451e36;
+	height: 45vh;
+}
+hr{
+	border: 1px solid #451e36
+}
+.yape{
+	background-color: #38052a;
+}
+.movimientos{
+	height: 100%
+}
+.movimientos p{
+	margin: 0;
+	padding: 1rem;
+}
+.engrane{
+	margin: 1.5rem;
+	width: 2rem;
+}
+.happy{
+	margin-top: 4rem;
+}
+.boton-yape{
+	width: 6rem;
+	margin: 3rem 2rem 1.5rem 2rem;
+	
+}
