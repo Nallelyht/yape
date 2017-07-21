@@ -1,17 +1,59 @@
+body{
+	color: #8f8f8f;
+}
 .carousel.carousel-slider{height:90vh !important}
-.carousel-fixed-item .btn{background-color:#fbd43b}
+.btn{background-color:#fbd43b}
 .carousel-slider .indicators .indicator-item.active{background-color:#f64451}
 .carousel-slider .indicators .indicator-item{background-color:rgba(246,68,81,0.29)}
 .input-field .responsive-img{width:4rem}
 .input-field .lock{width:1.2rem}
 .carousel .carousel-item>img{width:80%;margin-top:4rem}
 .aligner{display:flex;align-items:center;justify-content:center;flex-direction:column;height:100vh}
-.bold{font-weight:bold}
+.bold{font-weight:bold;
+color: black}
 .center .btn{margin-top:2rem}
-#btn-continuar a{color:#fff}
+a{color:#fff}
+.registro-terminos a{
+	color: #00c3a3;
+}
 .codigo input{
 	width: 90vw !important;
 }
 .usuario-exitoso{
 	background-color: #fbd43b;
+}
+.input-field .input-registro{
+	width:2rem
+}
+input[placeholder]{
+	text-align: center;
+}
+.cara-feliz{
+	background-color: #451e36;
+	height: 45vh;
+}
+hr{
+	border: 1px solid #451e36
+}
+.yape{
+	background-color: #38052a;
+}
+.movimientos{
+	height: 100%
+}
+.movimientos p{
+	margin: 0;
+	padding: 1rem;
+}
+.engrane{
+	margin: 1.5rem;
+	width: 2rem;
+}
+.happy{
+	margin-top: 4rem;
+}
+.boton-yape{
+	width: 6rem;
+	margin: 3rem 2rem 1.5rem 2rem;
+	
 }

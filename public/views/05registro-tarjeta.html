@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css"/>
+		<link rel="stylesheet" href="../assets/css/style.css"/>
+	</head>
+	<body>
+		<section class="container aligner">
+			<div class="row">
+				<div class="col s6 offset-s3">
+					<img src="../assets/img/icons/bcp-logo.png" alt="bcp" class="responsive-img"/>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s12">
+					<h5 class="center-align bold">Registra tu tarjeta de débito BCP</h5>
+				</div>
+				<div class="col s12">
+					<p class="center-align">
+						Por ahora solo aceptamos cuentas de ahorro y/o corriente en soles.
+					</p>
+				</div>
+			</div>
+			<form class="container center-align">
+				<div class="row">
+					<div class="input-field col s12">
+						<img src="../assets/img/icons/card.png" alt="card" class="responsive-img input-registro prefix">
+						<input id="numero-tarjeta" type="text" name="numero-tarjeta" placeholder="16 digitos de tu tarjeta" required>
+						<span> 
+							<img src="../assets/img/icons/scan.png" alt="">
+							Escanear Tarjeta
+						</span>
+					</div>
+					<div class="input-field col s6">
+						<span>Fecha de vencimiento</span>
+					</div>
+					<div class="input-field col s3">
+						<input type="number" placeholder="mes"> 
+					</div>
+					<div class="input-field col s3">
+						<input type="number" placeholder="año"> 
+					</div>
+				</div>
+				<button class="btn waves-effect white-text" id="btn-continuar-tarjeta" disabled>
+					<a href="06validacion-tarjeta.html">CONTINUAR
+					</a> </button>
+			</form>
+		</section>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+		<script src="../assets/js/app.js"></script>
+	</body>
+</html>
