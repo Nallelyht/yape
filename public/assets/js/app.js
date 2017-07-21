@@ -1,54 +1,41 @@
-var $botonContinuar = $('#btn-continuar');
-var $continuarCodigo = $("#continuar-codigo");
-var $registroTelefono = $('#registro-telefono');
-var $terminos = $('#terminos');
-var $crearUsuario = $("#crear-usuario");
-var $nombreUsuario = $("#nombre-usuario");
-var $correoUsuario = $("#correo-usuario");
-var $contraseñaUsuario = $("#contraseña-usuario");
-var $botonCrearCuenta = $("#btn-crear-cuenta");
-var $registroNumero = $("#form-registro-numero")
+/*Variables pagina 01Registro.html*/
+var formRegistroTelefono = $("#form-registro-numero");
+var inputTelefono = $("#registro-telefono");
+var checkboxTerminos = $("#terminos");
+var btnContinuarRegistro = $("#btn-continuar");
+/*Terminan variables pagina 01Registro.html*/
+localStorage.setItem('telefono', inputTelefono.val());
 
-
-
-var cargarPagina = function () {
+var cargarPagina = function (){
 	$('.carousel.carousel-slider').carousel({fullWidth: true});
-	$('select').material_select();
-	$terminos.click(validarNumero);
-	$registroTelefono.change(validarNumero);
-	$botonContinuar.click(enviarNumero);
-	$crearUsuario.change(crearUsuario);
+	checkboxTerminos.click(validarTelefonoCheckbox);
+	inputTelefono.keyup(validarTelefonoCheckbox);
+	formRegistroTelefono.submit(enviarTelefono);
+};
+var validarTelefonoCheckbox = function (){
+	if(inputTelefono.val().length === 10 && checkboxTerminos.is(":checked")){
+		btnContinuarRegistro.removeAttr("disabled");
+
+	} else{
+		btnContinuarRegistro.attr("disabled", true);
+	}
 };
 
-var validarNumero = function() {
-
-	if($registroTelefono.val().length === 10 && $terminos.is(":checked")){
-		removerAtributo();
-		enviarNumero();
-	}else {
-		$botonContinuar.attr("disabled", true);
-	};
-};
-
-var removerAtributo = function (){
-	$botonContinuar.removeAttr("disabled");
-};
-
-var enviarNumero = function (e){
+var enviarTelefono = function(e){
 	e.preventDefault();
+	var numeroTelefonico = inputTelefono.val();
 	$.post("http://localhost:3000/api/registerNumber", {
-		"phone": $registroTelefono.val(),
-		"terms": true
+		"phone" : numeroTelefonico,
+		"terms" : true
 	}).then(function(respuesta){
+		console.log(respuesta);
 		alert(respuesta.data.code);
-		console.log(respuesta)
+		location.href="02codigo.html"
 	}).catch(function(error){
-		alert(error);
-		$botonContinuar.attr("disabled", true);
-
+		console.log(error);
 	})
-}
-/*Crear Usuario*/
+};
+
 var crearUsuario = function(e){
 	e.preventDefault();
 	if($nombreUsuario.val().length != 0 && $correoUsuario.val() != 0 && $contraseñaUsuario.val().length == 6){
@@ -59,12 +46,16 @@ var crearUsuario = function(e){
 	};
 };
 var enviarUsuario = function (e){
+	var numeroTelefonico = inputTelefono.val();
+	var nombre = nombreUsuario.val()
+	var correo = correoUsuario.val()
+	var contraseña = contraseñaUsuario.val()
 	e.preventDefault();
 	$.post("http://localhost:3000/api/createUser", {
-		"phone" : $registroTelefono.val(),
-		"name" : $nombreUsuario.val(),
-		"email" : $correoUsuario.val(),
-		"password" : $contraseñaUsuario.val(),
+		"phone" : numeroTelefonico,
+		"name" : nombre,
+		"email" : correo,
+		"password" : contraseña
 	}).then(function(respuesta){
 		location.href = "usuario-exitoso.html"
 		console.log(respuesta)
@@ -75,4 +66,3 @@ var enviarUsuario = function (e){
 	})
 }
 $(document).ready(cargarPagina);
-
